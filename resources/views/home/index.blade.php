@@ -2,9 +2,8 @@
 
 @section('content')
     <section class="todoapp">
-        <add-todo @new-todo="addTodo"></add-todo>
         <!-- This section should be hidden by default and shown when there are todos -->
-        <todo-list :todos="todos"></todo-list>
+        <todos></todos>
     </section>
     <footer class="info">
         <p>Double-click to edit a todo</p>
