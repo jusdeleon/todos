@@ -15,4 +15,27 @@ new Vue({
         TodoList: require('./components/TodoList')
     },
     el: '#app',
+    data: {
+        todos: []
+    },
+    methods: {
+        fetchTodos() {
+            this.todos = [
+                {
+                    name: "Test",
+                    completed: true,
+                },
+                {
+                    name: "Test 2",
+                    completed: false,
+                },
+            ]
+        },
+        addTodo(todo) {
+            this.todos.unshift(todo);
+        }
+    },
+    created() {
+        this.fetchTodos();
+    }
 });
